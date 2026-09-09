@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AccesoDatos.Data
+namespace AccesoDatos.Models
 {
     public class Socio
     {
-        public string nombre { get; set;}
-        public string apellido { get; set;}
-        public int id { get; set;}
-        public int dni { get; set;}
-        public int telefono { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public int Id { get; set; }
+        // DNI y Telefono como string para aceptar entradas desde consola
+        public string Dni { get; set; }
+        public string Telefono { get; set; }
         public List<Alquiler> Alquileres { get; set; } = new();
     }
 }

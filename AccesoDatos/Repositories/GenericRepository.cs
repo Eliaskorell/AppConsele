@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Linq;
 using AccesoDatos.Data;
 
 namespace AccesoDatos.Repositories
@@ -17,14 +16,19 @@ namespace AccesoDatos.Repositories
 
         public void Agregar(T entidad)
         {
-            // Set() selecciona la tabla correcta dependiendo de la clase que le pases
             _context.Set<T>().Add(entidad);
-            _context.SaveChanges(); // Aquí se ejecuta el INSERT
+            _context.SaveChanges();
+        }
+
+        public void Actualizar(T entidad)
+        {
+            _context.Set<T>().Update(entidad);
+            _context.SaveChanges();
         }
 
         public List<T> ObtenerTodos()
         {
-            return _context.Set<T>().ToList(); // Aquí se ejecuta el SELECT
+            return _context.Set<T>().ToList();
         }
     }
 }

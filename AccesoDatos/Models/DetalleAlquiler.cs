@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using AccesoDatos.Models;
-namespace AccesoDatos.Data
+
+namespace AccesoDatos.Models
 {
     public class DetalleAlquiler
     {
