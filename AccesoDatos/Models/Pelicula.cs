@@ -15,4 +15,4 @@ namespace AccesoDatos.Models
         // Navegación: una película puede estar en varios detalles de alquiler
         public List<DetalleAlquiler> DetallesAlquiler { get; set; } = new();
     }
-}
+}   
